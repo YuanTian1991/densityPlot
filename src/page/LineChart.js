@@ -12,6 +12,11 @@ class LineChart extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      pick: {
+        "CP": ["Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "FALSE", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "FALSE", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "FALSE", "FALSE", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "Accept", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE", "FALSE"],
+        "SE": ["TRUE", "FALSE", "FALSE", "FALSE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "FALSE", "TRUE", "FALSE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "FALSE", "TRUE", "TRUE", "FALSE", "FALSE", "FALSE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "FALSE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "FALSE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE"],
+        "TY": ["TRUE", "FALSE", "FALSE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "FALSE", "FALSE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE"]
+      },
       data: {
         labels: [0, 0.016, 0.032, 0.048, 0.063, 0.079, 0.095, 0.111, 0.127, 0.143, 0.159, 0.175, 0.19, 0.206, 0.222, 0.238, 0.254, 0.27, 0.286, 0.302, 0.317, 0.333, 0.349, 0.365, 0.381, 0.397, 0.413, 0.429, 0.444, 0.46, 0.476, 0.492, 0.508, 0.524, 0.54, 0.556, 0.571, 0.587, 0.603, 0.619, 0.635, 0.651, 0.667, 0.683, 0.698, 0.714, 0.73, 0.746, 0.762, 0.778, 0.794, 0.81, 0.825, 0.841, 0.857, 0.873, 0.889, 0.905, 0.921, 0.937, 0.952, 0.968, 0.984, 1],
         datasets: JSON.parse(JSON.stringify(mydata)),
@@ -45,7 +50,27 @@ class LineChart extends React.Component {
         }
       })
     })
+  }
 
+  loadPick = (person) => {
+    var newData = []
+    JSON.parse(JSON.stringify(mydata)).forEach((sample, index) => {
+      if (this.state.pick[person][index] === "FALSE") {
+        let newSample = sample
+        newSample.backgroundColor = "rgba(160,160,160,0.3)"
+        newSample.borderColor = "rgba(160,160,160,0.3)"
+        newSample.pointBorderColor = "rgba(160,160,160,0.3)"
+        newSample.pointHoverBackgroundColor = "rgba(160,160,160,0.3)"
+
+        newData.push(newSample)
+      } else {
+        newData.push(sample)
+      }
+    });
+
+    var tmp = { ...this.state.data }
+    tmp.datasets = newData;
+    this.setState({ data: tmp })
   }
 
   render() {
@@ -55,6 +80,10 @@ class LineChart extends React.Component {
         <input value={this.state.start} onChange={(event) => this.handleStartChange(event)} />
         <span> &nbsp;Ends (max= {mydata.length}): </span>
         <input value={this.state.end} onChange={(event) => this.handleEndChange(event)} />
+
+        <button style={{ marginLeft: '1em' }} onClick={() => this.loadPick('CP')}>CP</button>
+        <button style={{ marginLeft: '1em' }} onClick={() => this.loadPick('SE')}>SE</button>
+        <button style={{ marginLeft: '1em' }} onClick={() => this.loadPick('TY')}>TY</button>
         <Line
           data={this.state.data}
           width={100}
